@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <script>
+            // Variáveis e dados
+            // Tipagem dinâmica
+            var nome = "Leo";
+            var idade = 21;
+            var peso = 95.4;
+            var humano = true;
+
+            var alunos = ['Leo', 'Gabriel', 'Diego'];
+
+            var aluno = {
+                nome: 'Leo',
+                idade: 21,
+                peso: 95.4,
+                humano: true
+            };
+
+            console.log(alunos);
+            console.log(aluno);
+
+            // Operações matemáticas
+            var x = 10, y = 5;
+            var resultado = x + y;
+
+            console.log(resultado);
+
+            // Funções
+            function soma(numero1, numero2) {
+                var resultado = numero1 + numero2;
+
+                return resultado;
+            }
+
+            var resultado = soma(1, 2);
+            console.log(resultado);
+
+            // Condicionais
+            function retornaSexo(sexo) {
+                /*if (sexo === 'M') {
+                    return 'Masculino';
+                } else if (sexo === 'F') {
+                    return 'Feminino';
+                } else {
+                    return 'Outro';
+                }*/
+
+                switch (sexo) {
+                    case 'M': 
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+            }
+
+            var resultado = retornaSexo('M');
+            console.log(resultado);
+
+            // Operadores lógicos
+            var sexo = 'M', idade = 23;
+
+            if (sexo === 'M' && idade >= 18) {
+                console.log('OK');
+            }
+            if (sexo === 'M' || idade >= 18) {
+                console.log('OK');
+            }
+            if (sexo !== 'M') {
+                console.log('OK');
+            }
+
+            var masculino;
+            if (sexo === 'M') {
+                masculino = true;
+            } else {
+                masculino = false;
+            }
+
+            var masculino = (sexo === 'M');
+            console.log(masculino);
+
+            // Condição ternária
+            var sexo = 'M';
+            var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+            console.log(retorno);
+
+            // Estrutura de repetição
+            for(var i = 0; i <= 100; i++) {
+                console.log(i);
+            }
+
+            var j = 0;
+            while(j <= 100) {
+                console.log(j);
+                j++;
+            }
+
+            // Intervalos e timeout
+            function exibeAlgo() {
+                console.log('Hello World');
+            }
+
+            setInterval(exibeAlgo, 1000);
+            setTimeout(exibeAlgo, 5000);
+        </script>
+    </body>
+</html>
